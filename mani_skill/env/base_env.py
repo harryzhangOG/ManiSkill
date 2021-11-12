@@ -1,56 +1,64 @@
-from sapien.utils import Viewer
-import sapien.core as sapien
-import numpy as np
 import importlib
-from gym import Env, spaces
-import zipfile
-import requests
 import io
-from sapien.core import Pose
+import os
+import warnings
+import zipfile
+from collections import defaultdict
+from copy import deepcopy
+from pathlib import Path
+
+import numpy as np
+import requests
+import sapien.core as sapien
+from gym import Env, spaces
 from mani_skill.utils.config_parser import (
     preprocess,
     process_variables,
     process_variants,
 )
-import warnings
-from copy import deepcopy
-import os
-from ..agent import CombinedAgent
-from .camera import CombinedCamera, read_images_from_camera, read_pointclouds_from_camera
-from collections import defaultdict
 from mani_skill.utils.geometry import angle_distance
 from mani_skill.utils.misc import get_actor_state, get_pad_articulation_state
+from sapien.core import Pose
+from sapien.utils import Viewer
 
-from pathlib import Path
+from ..agent import CombinedAgent
+from .camera import (
+    CombinedCamera,
+    read_images_from_camera,
+    read_pointclouds_from_camera,
+)
 
 
 def download_data(model_id, directory=None):
-    url = 'https://storage1.ucsd.edu/datasets/PartNetMobilityScrambled/{}.zip'.format(
-        model_id
-    )
-    if not directory:
-        directory = os.environ.get('PARTNET_MOBILITY_DATASET')
-        if not directory:
-            directory = 'partnet-mobility-dataset'
-    urdf_file = os.path.join(directory, str(model_id), 'mobility.urdf')
+    # url = 'https://storage1.ucsd.edu/datasets/PartNetMobilityScrambled/{}.zip'.format(
+    #     model_id
+    # )
+    # if not directory:
+    #     directory = os.environ.get('PARTNET_MOBILITY_DATASET')
+    #     if not directory:
+    #         directory = 'partnet-mobility-dataset'
+    # urdf_file = os.path.join(directory, str(model_id), 'mobility.urdf')
 
-    # return if file exists
-    if os.path.exists(urdf_file):
-        return urdf_file
+    # # return if file exists
+    # if os.path.exists(urdf_file):
+    #     return urdf_file
 
-    # download file
-    r = requests.get(url, stream=True)
-    if not r.ok:
-        raise Exception(
-            'Download PartNet-Mobility failed. '
-            'Please check your token and IP address.'
-            'Also make sure sure the model id is valid'
-        )
+    # # download file
+    # r = requests.get(url, stream=True)
+    # if not r.ok:
+    #     raise Exception(
+    #         'Download PartNet-Mobility failed. '
+    #         'Please check your token and IP address.'
+    #         'Also make sure sure the model id is valid'
+    #     )
 
-    z = zipfile.ZipFile(io.BytesIO(r.content))
+    # z = zipfile.ZipFile(io.BytesIO(r.content))
 
-    os.makedirs(directory, exist_ok=True)
-    z.extractall(directory)
+    # os.makedirs(directory, exist_ok=True)
+    # z.extractall(directory)
+    import sapien
+    token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhb2x1bnpAYW5kcmV3LmNtdS5lZHUiLCJpcCI6IjE3Mi4yMC4wLjEiLCJwcml2aWxlZ2UiOjEsImlhdCI6MTYzNjQxOTE1MiwiZXhwIjoxNjY3OTU1MTUyfQ.1G__GDPP7aWWgryv5JIbsRLxUNLoOhgDHfEzxk3b33c"
+    urdf_file = sapien.asset.download_partnet_mobility(model_id, token)
     return urdf_file
 
 
@@ -61,16 +69,17 @@ _engine.set_renderer(_renderer)
 
 _engine.set_log_level('off')
 
+
 class BaseEnv(Env):
-    def __init__(self, 
-                config_file, 
-                obs_mode='state', 
-                reward_type='dense', 
-                frame_skip=5, 
-                max_episode_steps=200, 
-                variant_config={}, 
-                override_model_file=None,
-        ):
+    def __init__(self,
+                 config_file,
+                 obs_mode='state',
+                 reward_type='dense',
+                 frame_skip=5,
+                 max_episode_steps=200,
+                 variant_config={},
+                 override_model_file=None,
+                 ):
         self.set_env_mode(obs_mode, reward_type)
         self._engine = _engine
         self._renderer = _renderer
@@ -92,7 +101,8 @@ class BaseEnv(Env):
         self.configure_env()
         obs = self.reset(level=0)
 
-        self.action_space = spaces.Box(low=-1, high=1, shape=self.agent.action_range().shape)
+        self.action_space = spaces.Box(
+            low=-1, high=1, shape=self.agent.action_range().shape)
         self.observation_space = self._observation_to_space(obs)
         self.time_per_env_step = frame_skip / self.agent.control_frequency
 
@@ -125,7 +135,8 @@ class BaseEnv(Env):
                 flag = True
                 break
         if not flag:
-            raise Exception('Override models failed: {:s} not found in the yaml file.'.format(art_name))
+            raise Exception(
+                'Override models failed: {:s} not found in the yaml file.'.format(art_name))
 
     def reset_level(self):
         self.agent.reset()
@@ -151,7 +162,8 @@ class BaseEnv(Env):
 
         config = deepcopy(self.yaml_config)
         config = process_variables(config, self._level_rng)
-        self.all_model_ids = list(config['layout']['articulations'][0]['_variants']['options'].keys())
+        self.all_model_ids = list(
+            config['layout']['articulations'][0]['_variants']['options'].keys())
         self.level_config, self.level_variant_config = process_variants(
             config, self._level_rng, self.variant_config
         )
@@ -173,12 +185,13 @@ class BaseEnv(Env):
         self.step_in_ep = 0
 
         # Cannot return obs right now because something will be determined in derived class
-        # return self.get_obs() 
+        # return self.get_obs()
 
     def _init_eval_record(self):
         self.keep_good_steps = defaultdict(int)
         keep_good_time = 0.5
-        self.keep_good_steps_threshold = int( np.ceil(keep_good_time * self.agent.control_frequency / self.frame_skip) ) 
+        self.keep_good_steps_threshold = int(
+            np.ceil(keep_good_time * self.agent.control_frequency / self.frame_skip))
 
     def _setup_main_rng(self, seed):
         self._main_seed = seed
@@ -189,9 +202,11 @@ class BaseEnv(Env):
             self.level_config['render']['ambient_light']['color']
         )
         for pl in self.level_config['render']['point_lights']:
-            self._scene.renderer_scene.add_point_light(pl['position'], pl['color'])
+            self._scene.renderer_scene.add_point_light(
+                pl['position'], pl['color'])
         for dl in self.level_config['render']['directional_lights']:
-            self._scene.renderer_scene.add_directional_light(dl['direction'], dl['color'])
+            self._scene.renderer_scene.add_directional_light(
+                dl['direction'], dl['color'])
 
     def _load_camera(self, cam_info):
         cam_info = deepcopy(cam_info)
@@ -212,12 +227,13 @@ class BaseEnv(Env):
             actor=camera_mount_actor, pose=pose, **cam_info, fovx=0
         )
         return camera
-    
+
     def _setup_cameras(self):
         cameras = []
         for cam_info in self.level_config['render']['cameras']:
             if 'sub_cameras' in cam_info:
-                sub_cameras = [self._load_camera(sub_cam_info) for sub_cam_info in cam_info['sub_cameras']]
+                sub_cameras = [self._load_camera(
+                    sub_cam_info) for sub_cam_info in cam_info['sub_cameras']]
                 combined_camera = CombinedCamera(cam_info['name'], sub_cameras)
                 cameras.append(combined_camera)
             else:
@@ -278,7 +294,8 @@ class BaseEnv(Env):
             if 'initial_qpos' in articulation_config:
                 articulation.set_qpos(articulation_config['initial_qpos'])
             articulation.set_root_pose(
-                Pose(articulation_config['position'], articulation_config['rotation'])
+                Pose(articulation_config['position'],
+                     articulation_config['rotation'])
             )
             articulation.set_name(articulation_config['name'])
             self.articulations[articulation_config['name']] = {
@@ -299,11 +316,12 @@ class BaseEnv(Env):
 
             builder: sapien.ActorBuilder = self._scene.create_actor_builder()
             builder.add_box_visual(
-                pose=Pose(p=(0,0,-1), q=(0,0,0,1)), 
-                half_size=[50, 50, 1], 
+                pose=Pose(p=(0, 0, -1), q=(0, 0, 0, 1)),
+                half_size=[50, 50, 1],
                 material=self.render_materials['ground'],
             )
-            visual_ground: sapien.Actor = builder.build_static(name='visual_ground')
+            visual_ground: sapien.Actor = builder.build_static(
+                name='visual_ground')
 
             a = self._scene.add_ground(
                 shape['altitude'],
@@ -345,7 +363,8 @@ class BaseEnv(Env):
             assert 'type' in shape
             if shape['type'] in ['box', 'sphere', 'capsule']:
                 if shape['collision']:
-                    shape_func = getattr(builder, 'add_{}_collision'.format(shape['type']))
+                    shape_func = getattr(
+                        builder, 'add_{}_collision'.format(shape['type']))
                     shape_func(
                         Pose(position, rotation),
                         shape['size'],
@@ -362,7 +381,8 @@ class BaseEnv(Env):
                         render_mat = self._renderer.create_material()
                         if 'color' in shape:
                             render_mat.set_base_color(shape['color'])
-                    visual_func(Pose(position, rotation), shape['size'], render_mat)
+                    visual_func(Pose(position, rotation),
+                                shape['size'], render_mat)
             elif shape['type'] == 'mesh':
                 if shape['collision']:
                     builder.add_multiple_collisions_from_file(
@@ -404,11 +424,11 @@ class BaseEnv(Env):
                 agents.append(AgentClass(self._engine, self._scene, config))
             self.agent = CombinedAgent(agents)
         else:
-            module_name, class_name = agent_config['agent_class'].rsplit('.', 1)
+            module_name, class_name = agent_config['agent_class'].rsplit(
+                '.', 1)
             module = importlib.import_module(module_name)
             AgentClass = getattr(module, class_name)
             self.agent = AgentClass(self._engine, self._scene, agent_config)
-
 
         if self.simulation_frequency % self.agent.control_frequency != 0:
             warnings.warn(
@@ -437,7 +457,7 @@ class BaseEnv(Env):
                 view_dict = obs[self.obs_mode]
                 for view_type, view in view_dict.items():
                     ob_space[view_type] = spaces.Box(
-                        low=-float('inf'), high=float('inf'), 
+                        low=-float('inf'), high=float('inf'),
                         shape=view.shape, dtype=view.dtype,
                     )
             else:
@@ -445,7 +465,7 @@ class BaseEnv(Env):
                     ob_space[camera_name] = {}
                     for view_type, view in view_dict.items():
                         ob_space[camera_name][view_type] = spaces.Box(
-                            low=-float('inf'), high=float('inf'), 
+                            low=-float('inf'), high=float('inf'),
                             shape=view.shape, dtype=view.dtype,
                         )
             return {
@@ -472,9 +492,10 @@ class BaseEnv(Env):
         actors, arts = self.get_all_objects_in_state()
 
         actors_state = [get_actor_state(actor) for actor in actors]
-        arts_state = [get_pad_articulation_state(art, max_dof) for art, max_dof in arts]
+        arts_state = [get_pad_articulation_state(
+            art, max_dof) for art, max_dof in arts]
 
-        return np.concatenate( actors_state + arts_state + [
+        return np.concatenate(actors_state + arts_state + [
             self.get_additional_task_info(obs_mode='state'),
             self.agent.get_state(with_controller_state=with_controller_state),
         ])
@@ -502,7 +523,7 @@ class BaseEnv(Env):
             art.set_qpos(state[0:art.dof])
             art.set_qvel(state[max_dof:max_dof+art.dof])
             state = state[2*max_dof:]
-        
+
         # skip task info
         task_info_len = len(self.get_additional_task_info(obs_mode='state'))
         state = state[task_info_len:]
@@ -535,21 +556,23 @@ class BaseEnv(Env):
             eval_result_dict[key] = self.keep_good_steps[key] >= self.keep_good_steps_threshold
         return eval_result_dict, eval_result_dict['success']
 
-    def _clip_and_scale_action(self, action): # from [-1, 1] to real action range
+    # from [-1, 1] to real action range
+    def _clip_and_scale_action(self, action):
         action = np.clip(action, -1, 1)
         t = self.agent.action_range()
-        action = 0.5 * (t.high - t.low) * action + 0.5 * (t.high + t.low) 
+        action = 0.5 * (t.high - t.low) * action + 0.5 * (t.high + t.low)
         return action
 
     def step(self, action):
         self.step_in_ep += 1
         processed_action = self._clip_and_scale_action(action)
         for __ in range(self.frame_skip):
-            self.agent.set_action(processed_action.copy()) # avoid action being changed
+            # avoid action being changed
+            self.agent.set_action(processed_action.copy())
             for _ in range(self.n_simulation_per_control_step):
                 self.agent.simulation_step()
                 self._scene.step()
-        
+
         info = {}
         info['eval_info'], done = self._eval()
 
@@ -575,16 +598,20 @@ class BaseEnv(Env):
 
     def check_actor_static(self, actor, max_v=None, max_ang_v=None):
         if self.step_in_ep <= 1:
-            flag_v = (max_v is None) or (np.linalg.norm(actor.get_velocity()) <= max_v)
-            flag_ang_v = (max_ang_v is None) or (np.linalg.norm(actor.get_angular_velocity()) <= max_ang_v)
+            flag_v = (max_v is None) or (
+                np.linalg.norm(actor.get_velocity()) <= max_v)
+            flag_ang_v = (max_ang_v is None) or (
+                np.linalg.norm(actor.get_angular_velocity()) <= max_ang_v)
         else:
             pose = actor.get_pose()
             t = self.time_per_env_step
-            flag_v = (max_v is None) or ( np.linalg.norm( pose.p - self._prev_actor_pose.p ) <= max_v * t)
-            flag_ang_v = (max_ang_v is None) or (angle_distance(self._prev_actor_pose, pose) <= max_ang_v * t)
+            flag_v = (max_v is None) or (np.linalg.norm(
+                pose.p - self._prev_actor_pose.p) <= max_v * t)
+            flag_ang_v = (max_ang_v is None) or (angle_distance(
+                self._prev_actor_pose, pose) <= max_ang_v * t)
         self._prev_actor_pose = actor.get_pose()
         return flag_v and flag_ang_v
-    
+
     def render(self, mode='color_image', depth=False, seg=None, camera_names=None):
         self._scene.update_render()
         if mode == 'human':
@@ -619,21 +646,22 @@ class BaseEnv(Env):
                     cam.take_picture()
                 for cam in cameras:
                     if isinstance(cam, CombinedCamera):
-                        view = cam.get_combined_view(mode, depth, seg_idx) # list of dict for image, dict for pointcloud
+                        # list of dict for image, dict for pointcloud
+                        view = cam.get_combined_view(mode, depth, seg_idx)
                     else:
-                        view = get_view_func(cam, depth, seg_idx) # dict
+                        view = get_view_func(cam, depth, seg_idx)  # dict
                     views[cam.get_name()] = view
                 return views
 
     def _post_process_view(self, view_dict):
-        actor_id_seg = view_dict['seg'] # (n, m, 1)
+        actor_id_seg = view_dict['seg']  # (n, m, 1)
         mask = np.zeros(actor_id_seg.shape, dtype=np.bool)
         for actor_id in self.robot_link_ids:
-            mask = mask | ( actor_id_seg == actor_id )
+            mask = mask | (actor_id_seg == actor_id)
 
         view_dict['seg'] = mask
 
-    def get_obs(self, seg='actor', **kwargs): # seg can be 'visual', 'actor', 'both'
+    def get_obs(self, seg='actor', **kwargs):  # seg can be 'visual', 'actor', 'both'
         if self.obs_mode == 'custom':
             return self.get_custom_observation()
         if self.obs_mode == 'state':
@@ -650,22 +678,23 @@ class BaseEnv(Env):
             }
         # post processing
         if self.obs_mode == 'pointcloud' or self.obs_mode == 'rgbd':
-            views = obs[self.obs_mode] # views is also a dict, keys including 'robot', 'world', ...
+            # views is also a dict, keys including 'robot', 'world', ...
+            views = obs[self.obs_mode]
             for cam_name, view in views.items():
                 if isinstance(view, list):
                     for view_dict in view:
                         self._post_process_view(view_dict)
                     combined_view = {}
                     for key in view[0].keys():
-                        combined_view[key] = np.concatenate([view_dict[key] for view_dict in view], axis=-1)
+                        combined_view[key] = np.concatenate(
+                            [view_dict[key] for view_dict in view], axis=-1)
                     views[cam_name] = combined_view
-                else: # view is a dict
+                else:  # view is a dict
                     self._post_process_view(view)
             if len(views) == 1:
                 view = next(iter(views.values()))
                 obs[self.obs_mode] = view
         return obs
-
 
     def close(self):
         if hasattr(self, '_viewer') and self._viewer:
