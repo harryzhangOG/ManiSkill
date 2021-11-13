@@ -71,6 +71,8 @@ class OpenCabinetEnvBase(BaseEnv):
         handles_visual_body_ids = {}
         o3d_info = {}
         grasp_pose = {}
+        door_kw = ['door', 'handle', 'board', 'panel', 'leaf', 'lid', 'cover', 'frame',
+                   'glass', 'hinge', 'fixed_part', 'seat', 'leg', 'screen', 'shaft', 'opener']
 
         for link in self.cabinet.get_links():
             link_name = link.get_name()
@@ -80,9 +82,13 @@ class OpenCabinetEnvBase(BaseEnv):
 
             o3d_info[link_name] = []
             for visual_body in link.get_visual_bodies():
-                if 'knob' in visual_body.get_name():
+                if 'knob' in visual_body.get_name() or 'movable_part' in visual_body.get_name() or 'handle' in visual_body.get_name():
                     continue
-                if 'door' not in visual_body.get_name() and 'handle' not in visual_body.get_name():
+                kw_in = False
+                for kw in door_kw:
+                    if kw in visual_body.get_name():
+                        kw_in = True
+                if not kw_in:
                     continue
                 handles_visual_body_ids[link_name].append(
                     visual_body.get_visual_id())
