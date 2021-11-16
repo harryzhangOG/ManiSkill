@@ -98,3 +98,493 @@
   num_target_links: 3
   partnet_mobility_id: 1082
   scale: 0.4942616225620546
+# Dishwasher
+'12085':
+  num_target_links: 1
+  partnet_mobility_id: 12085
+  scale: 0.43974655521394934
+# Door
+'9032':
+  num_target_links: 1
+  partnet_mobility_id: 9032
+  scale: 0.43974655521394934
+# Pots (needs further discussion)
+'100015':
+  num_target_links: 1
+  partnet_mobility_id: 100015
+  scale: 0.43974655521394934
+# suitcase needs better MP
+'100248':
+  num_target_links: 1
+  partnet_mobility_id: 100248
+  scale: 0.43974655521394934
+'100836':
+  num_target_links: 1
+  partnet_mobility_id: 100836
+  scale: 0.43974655521394934
+'100837':
+  num_target_links: 1
+  partnet_mobility_id: 100837
+  scale: 0.43974655521394934
+'100840':
+  num_target_links: 1
+  partnet_mobility_id: 100840
+  scale: 0.43974655521394934
+'100842':
+  num_target_links: 1
+  partnet_mobility_id: 100842
+  scale: 0.43974655521394934
+'101048':
+  num_target_links: 1
+  partnet_mobility_id: 101048
+  scale: 0.43974655521394934
+'101049':
+  num_target_links: 1
+  partnet_mobility_id: 101049
+  scale: 0.43974655521394934
+'101050':
+  num_target_links: 1
+  partnet_mobility_id: 101050
+  scale: 0.43974655521394934
+'101051': # blocks view
+  num_target_links: 1
+  partnet_mobility_id: 101051
+  scale: 0.43974655521394934
+'103770':
+  num_target_links: 1
+  partnet_mobility_id: 103770
+  scale: 0.43974655521394934
+#Phones
+'103252':
+  num_target_links: 1
+  partnet_mobility_id: 103252
+  scale: 0.43974655521394934
+'103828':
+  num_target_links: 1
+  partnet_mobility_id: 103828
+  scale: 0.43974655521394934
+'103916':
+  num_target_links: 1
+  partnet_mobility_id: 103916
+  scale: 0.43974655521394934
+'103925':
+  num_target_links: 1
+  partnet_mobility_id: 103925
+  scale: 0.43974655521394934
+# Kettle
+'100031':
+  num_target_links: 1
+  partnet_mobility_id: 100031
+  scale: 0.23974655521394934
+'101305':
+  num_target_links: 1
+  partnet_mobility_id: 101305
+  scale: 0.23974655521394934
+'101311':
+  num_target_links: 1
+  partnet_mobility_id: 101311
+  scale: 0.23974655521394934
+'101315':
+  num_target_links: 1
+  partnet_mobility_id: 101315
+  scale: 0.23974655521394934
+'102714':
+  num_target_links: 1
+  partnet_mobility_id: 102714
+  scale: 0.23974655521394934
+'102715':
+  num_target_links: 1
+  partnet_mobility_id: 102715
+  scale: 0.23974655521394934
+'102720':
+  num_target_links: 1
+  partnet_mobility_id: 102720
+  scale: 0.23974655521394934
+'102724':
+  num_target_links: 1
+  partnet_mobility_id: 102724
+  scale: 0.23974655521394934
+'102726':
+  num_target_links: 1
+  partnet_mobility_id: 102726
+  scale: 0.23974655521394934
+'102730':
+  num_target_links: 1
+  partnet_mobility_id: 102730
+  scale: 0.23974655521394934
+'102732':
+  num_target_links: 1
+  partnet_mobility_id: 102732
+  scale: 0.23974655521394934
+'102736':
+  num_target_links: 1
+  partnet_mobility_id: 102736
+  scale: 0.23974655521394934
+'102738':
+  num_target_links: 1
+  partnet_mobility_id: 102738
+  scale: 0.23974655521394934
+'102739':
+  num_target_links: 1
+  partnet_mobility_id: 102739
+  scale: 0.23974655521394934
+'102753':
+  num_target_links: 1
+  partnet_mobility_id: 102753
+  scale: 0.23974655521394934
+'102756':
+  num_target_links: 1
+  partnet_mobility_id: 102756
+  scale: 0.23974655521394934
+'102761':
+  num_target_links: 1
+  partnet_mobility_id: 102761
+  scale: 0.23974655521394934
+'102763':
+  num_target_links: 1
+  partnet_mobility_id: 102763
+  scale: 0.23974655521394934
+'102765':
+  num_target_links: 1
+  partnet_mobility_id: 102765
+  scale: 0.23974655521394934
+'102768':
+  num_target_links: 1
+  partnet_mobility_id: 102768
+  scale: 0.23974655521394934
+'102786':
+  num_target_links: 1
+  partnet_mobility_id: 102786
+  scale: 0.23974655521394934
+'103201':
+  num_target_links: 1
+  partnet_mobility_id: 103201
+  scale: 0.23974655521394934
+'103207':
+  num_target_links: 1
+  partnet_mobility_id: 103207
+  scale: 0.23974655521394934
+'103208':
+  num_target_links: 1
+  partnet_mobility_id: 103208
+  scale: 0.23974655521394934
+# Pots
+'100015':
+  num_target_links: 1
+  partnet_mobility_id: 100015
+  scale: 0.43974655521394934
+'100017':
+  num_target_links: 1
+  partnet_mobility_id: 100017
+  scale: 0.43974655521394934
+'100021':
+  num_target_links: 1
+  partnet_mobility_id: 100021
+  scale: 0.43974655521394934
+'100023':
+  num_target_links: 1
+  partnet_mobility_id: 100023
+  scale: 0.43974655521394934
+'100025':
+  num_target_links: 1
+  partnet_mobility_id: 100025
+  scale: 0.43974655521394934
+'100028':
+  num_target_links: 1
+  partnet_mobility_id: 100028
+  scale: 0.43974655521394934
+'100032':
+  num_target_links: 1
+  partnet_mobility_id: 100032
+  scale: 0.43974655521394934
+
+'100033':
+  num_target_links: 1
+  partnet_mobility_id: 100033
+  scale: 0.43974655521394934
+'100038':
+  num_target_links: 1
+  partnet_mobility_id: 100038
+  scale: 0.43974655521394934
+'100040':
+  num_target_links: 1
+  partnet_mobility_id: 100040
+  scale: 0.43974655521394934
+'100045':
+  num_target_links: 1
+  partnet_mobility_id: 100045
+  scale: 0.43974655521394934
+'100047':
+  num_target_links: 1
+  partnet_mobility_id: 100047
+  scale: 0.43974655521394934
+'100051':
+  num_target_links: 1
+  partnet_mobility_id: 100051
+  scale: 0.43974655521394934
+'100054':
+  num_target_links: 1
+  partnet_mobility_id: 100054
+  scale: 0.43974655521394934
+'100055':
+  num_target_links: 1
+  partnet_mobility_id: 100055
+  scale: 0.43974655521394934
+'100056':
+  num_target_links: 1
+  partnet_mobility_id: 100056
+  scale: 0.43974655521394934
+'100057':
+  num_target_links: 1
+  partnet_mobility_id: 100057
+  scale: 0.43974655521394934
+'100058':
+  num_target_links: 1
+  partnet_mobility_id: 100058
+  scale: 0.43974655521394934
+'100060':
+  num_target_links: 1
+  partnet_mobility_id: 100060
+  scale: 0.43974655521394934
+'100613':
+  num_target_links: 1
+  partnet_mobility_id: 100613
+  scale: 0.43974655521394934
+'100619':
+  num_target_links: 1
+  partnet_mobility_id: 100619
+  scale: 0.43974655521394934
+'100623':
+  num_target_links: 1
+  partnet_mobility_id: 100623
+  scale: 0.43974655521394934
+'100693':
+  num_target_links: 1
+  partnet_mobility_id: 100693
+  scale: 0.43974655521394934
+'102080':
+  num_target_links: 1
+  partnet_mobility_id: 102080
+  scale: 0.43974655521394934
+'102085':
+  num_target_links: 1
+  partnet_mobility_id: 102085
+  scale: 0.43974655521394934
+# Buttons
+'100870':
+  num_target_links: 2
+  partnet_mobility_id: 100870
+  scale: 0.43974655521394934
+'100920':
+  num_target_links: 2
+  partnet_mobility_id: 100920
+  scale: 0.43974655521394934
+'100948':
+  num_target_links: 1
+  partnet_mobility_id: 100948
+  scale: 0.43974655521394934
+'100970':
+  num_target_links: 1
+  partnet_mobility_id: 100970
+  scale: 0.43974655521394934
+# windows
+'100982':
+  num_target_links: 3
+  partnet_mobility_id: 100982
+  scale: 0.43974655521394934
+'102798':
+  num_target_links: 4
+  partnet_mobility_id: 102798
+  scale: 0.43974655521394934
+'102801':
+  num_target_links: 2
+  partnet_mobility_id: 102801
+  scale: 0.43974655521394934
+'102802':
+  num_target_links: 2
+  partnet_mobility_id: 102802
+  scale: 0.43974655521394934
+'102803':
+  num_target_links: 2
+  partnet_mobility_id: 102803
+  scale: 0.43974655521394934
+'102804':
+  num_target_links: 2
+  partnet_mobility_id: 102804
+  scale: 0.43974655521394934
+'102805':
+  num_target_links: 3
+  partnet_mobility_id: 102805
+  scale: 0.43974655521394934
+'102896':
+  num_target_links: 2
+  partnet_mobility_id: 102896
+  scale: 0.43974655521394934
+'102903':
+  num_target_links: 3
+  partnet_mobility_id: 102903
+  scale: 0.43974655521394934
+'102905':
+  num_target_links: 2
+  partnet_mobility_id: 102905
+  scale: 0.43974655521394934
+'102906':
+  num_target_links: 2
+  partnet_mobility_id: 102906
+  scale: 0.43974655521394934
+'102977':
+  num_target_links: 3
+  partnet_mobility_id: 102977
+  scale: 0.43974655521394934
+'102981':
+  num_target_links: 2
+  partnet_mobility_id: 102981
+  scale: 0.43974655521394934
+'102984':
+  num_target_links: 2
+  partnet_mobility_id: 102984
+  scale: 0.43974655521394934
+'102985':
+  num_target_links: 2
+  partnet_mobility_id: 102985
+  scale: 0.43974655521394934
+'103032':
+  num_target_links: 2
+  partnet_mobility_id: 103032
+  scale: 0.43974655521394934
+'103042':
+  num_target_links: 2
+  partnet_mobility_id: 103042
+  scale: 0.43974655521394934
+'103044':
+  num_target_links: 3
+  partnet_mobility_id: 103044
+  scale: 0.43974655521394934
+'103050':
+  num_target_links: 2
+  partnet_mobility_id: 103050
+  scale: 0.43974655521394934
+'103051':
+  num_target_links: 2
+  partnet_mobility_id: 103051
+  scale: 0.43974655521394934
+'103052':
+  num_target_links: 2
+  partnet_mobility_id: 103052
+  scale: 0.43974655521394934
+'103058':
+  num_target_links: 2
+  partnet_mobility_id: 103058
+  scale: 0.43974655521394934
+'103149':
+  num_target_links: 2
+  partnet_mobility_id: 103149
+  scale: 0.43974655521394934
+'103150':
+  num_target_links: 2
+  partnet_mobility_id: 103150
+  scale: 0.43974655521394934
+'103235':
+  num_target_links: 2
+  partnet_mobility_id: 103235
+  scale: 0.43974655521394934
+'103236':
+  num_target_links: 2
+  partnet_mobility_id: 103236
+  scale: 0.43974655521394934
+'103238':
+  num_target_links: 2
+  partnet_mobility_id: 103238
+  scale: 0.43974655521394934
+'103242':
+  num_target_links: 1
+  partnet_mobility_id: 103242
+  scale: 0.43974655521394934
+'103253':
+  num_target_links: 3
+  partnet_mobility_id: 103253
+  scale: 0.43974655521394934
+'103255':
+  num_target_links: 2
+  partnet_mobility_id: 103255
+  scale: 0.43974655521394934
+'103268':
+  num_target_links: 2
+  partnet_mobility_id: 103268
+  scale: 0.43974655521394934
+'103312':
+  num_target_links: 1
+  partnet_mobility_id: 103312
+  scale: 0.43974655521394934
+'103315':
+  num_target_links: 4
+  partnet_mobility_id: 103315
+  scale: 0.43974655521394934
+'103316':
+  num_target_links: 4
+  partnet_mobility_id: 103316
+  scale: 0.43974655521394934
+'103318':
+  num_target_links: 2
+  partnet_mobility_id: 103318
+  scale: 0.43974655521394934
+'103320':
+  num_target_links: 3
+  partnet_mobility_id: 103320
+  scale: 0.43974655521394934
+'103321':
+  num_target_links: 2
+  partnet_mobility_id: 103321
+  scale: 0.43974655521394934
+'103323':
+  num_target_links: 2
+  partnet_mobility_id: 103323
+  scale: 0.43974655521394934
+'103325':
+  num_target_links: 2
+  partnet_mobility_id: 103325
+  scale: 0.43974655521394934
+'103329':
+  num_target_links: 2
+  partnet_mobility_id: 103329
+  scale: 0.43974655521394934
+'103332':
+  num_target_links: 2
+  partnet_mobility_id: 103332
+  scale: 0.43974655521394934
+'103333':
+  num_target_links: 2
+  partnet_mobility_id: 103333
+  scale: 0.43974655521394934
+'103339':
+  num_target_links: 2
+  partnet_mobility_id: 103339
+  scale: 0.43974655521394934
+'103340':
+  num_target_links: 4
+  partnet_mobility_id: 103340
+  scale: 0.43974655521394934
+'103669':
+  num_target_links: 3
+  partnet_mobility_id: 103669
+  scale: 0.43974655521394934
+'103684':
+  num_target_links: 3
+  partnet_mobility_id: 103684
+  scale: 0.43974655521394934
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
