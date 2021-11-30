@@ -71,8 +71,8 @@ class OpenCabinetEnvBase(BaseEnv):
         handles_visual_body_ids = {}
         o3d_info = {}
         grasp_pose = {}
-        door_kw = ['door', 'handle', 'board', 'panel', 'leaf', 'lid', 'cover', 'frame', 'handle', 'switch', 'lever', 'slider',
-                   'glass', 'hinge', 'fixed_part', 'seat', 'leg', 'screen', 'shaft', 'opener', 'countertop', 'toggle', 'translation']
+        door_kw = ['door', 'handle', 'board', 'panel', 'leaf', 'lid', 'cover', 'frame', 'handle', 'switch', 'lever', 'slider', 'rotation',
+                   'glass', 'mirror', 'hinge', 'fixed_part', 'seat', 'leg', 'screen', 'shaft', 'opener', 'countertop', 'toggle', 'translation', 'movable_part']
 
         for link in self.cabinet.get_links():
             link_name = link.get_name()
