@@ -1106,25 +1106,13 @@
   num_target_links: 1
   partnet_mobility_id: 103646
   scale: 0.53974655521394934
-'11818':
-  num_target_links: 1
-  partnet_mobility_id: 11818
-  scale: 0.53974655521394934
 '102252':
   num_target_links: 1
   partnet_mobility_id: 102252
   scale: 0.53974655521394934
-'102996':
-  num_target_links: 1
-  partnet_mobility_id: 102996
-  scale: 0.53974655521394934
 '102244':
   num_target_links: 1
   partnet_mobility_id: 102244
-  scale: 0.53974655521394934
-'100732':
-  num_target_links: 1
-  partnet_mobility_id: 100732
   scale: 0.53974655521394934
 '103007':
   num_target_links: 1
@@ -1162,14 +1150,6 @@
   num_target_links: 1
   partnet_mobility_id: 102992
   scale: 0.53974655521394934
-'11229':
-  num_target_links: 1
-  partnet_mobility_id: 11229
-  scale: 0.53974655521394934
-'11259':
-  num_target_links: 1
-  partnet_mobility_id: 11259
-  scale: 0.53974655521394934
 '102165':
   num_target_links: 1
   partnet_mobility_id: 102165
@@ -1185,10 +1165,6 @@
 '102229':
   num_target_links: 1
   partnet_mobility_id: 102229
-  scale: 0.53974655521394934
-'103013':
-  num_target_links: 1
-  partnet_mobility_id: 103013
   scale: 0.53974655521394934
 '103639':
   num_target_links: 1
@@ -1630,18 +1606,6 @@
   num_target_links: 1
   partnet_mobility_id: 102739
   scale: 0.23974655521394934
-'101313':
-  num_target_links: 1
-  partnet_mobility_id: 101313
-  scale: 0.43974655521394934
-'102773':
-  num_target_links: 1
-  partnet_mobility_id: 102773
-  scale: 0.43974655521394934
-'103222':
-  num_target_links: 1
-  partnet_mobility_id: 103222
-  scale: 0.43974655521394934
 
 
 # Microwaves
@@ -1793,6 +1757,14 @@
   partnet_mobility_id: 100980
   scale: 0.43974655521394934
 # Tables (same as storage)
+'32566':
+  num_target_links: 1
+  partnet_mobility_id: 32566
+  scale: 0.43974655521394934
+'32086':
+  num_target_links: 1
+  partnet_mobility_id: 32086
+  scale: 0.43974655521394934
 '26875':
   num_target_links: 2
   partnet_mobility_id: 26875
@@ -2678,6 +2650,22 @@
 '49188':
   num_target_links: 1
   partnet_mobility_id: 49188
+  scale: 0.53974655521394934
+'45403':
+  num_target_links: 1
+  partnet_mobility_id: 45403
+  scale: 0.53974655521394934
+'45419':
+  num_target_links: 1
+  partnet_mobility_id: 45419
+  scale: 0.53974655521394934
+'45725':
+  num_target_links: 1
+  partnet_mobility_id: 45725
+  scale: 0.53974655521394934
+'47088':
+  num_target_links: 1
+  partnet_mobility_id: 47088
   scale: 0.53974655521394934
 
 

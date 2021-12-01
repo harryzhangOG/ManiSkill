@@ -40,7 +40,7 @@ class OpenCabinetEnvBase(BaseEnv):
 
     def configure_env(self):
         # self.cabinet_max_dof = 8  # actually, it is 6 for our data
-        self.cabinet_max_dof = 19  # actually, it is 6 for our data
+        self.cabinet_max_dof = 20  # actually, it is 6 for our data
 
     def reset(self, *args, **kwargs):
         super().reset(*args, **kwargs)
