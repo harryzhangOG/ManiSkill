@@ -503,9 +503,9 @@
   partnet_mobility_id: 8919
   scale: 0.53974655521394934
 '8930': # weird
-  num_target_links: 2
+  num_target_links: 1
   partnet_mobility_id: 8930
-  scale: 0.53974655521394934
+  scale: 0.63974655521394934
 '8961':
   num_target_links: 2
   partnet_mobility_id: 8961
@@ -633,175 +633,175 @@
 '9748':
   num_target_links: 1
   partnet_mobility_id: 9748
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '9912':
   num_target_links: 1
   partnet_mobility_id: 9912
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '9960':
   num_target_links: 1
   partnet_mobility_id: 9960
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '9968':
   num_target_links: 1
   partnet_mobility_id: 9968
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '9992':
   num_target_links: 1
   partnet_mobility_id: 9992
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '9996':
   num_target_links: 1
   partnet_mobility_id: 9996
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10098':
   num_target_links: 1
   partnet_mobility_id: 10098
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10101':
   num_target_links: 1
   partnet_mobility_id: 10101
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10125':
   num_target_links: 1
   partnet_mobility_id: 10125
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10211':
   num_target_links: 1
   partnet_mobility_id: 10211
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10213':
   num_target_links: 1
   partnet_mobility_id: 10213
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10238':
   num_target_links: 1
   partnet_mobility_id: 10238
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10239':
   num_target_links: 1
   partnet_mobility_id: 10239
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10243':
   num_target_links: 1
   partnet_mobility_id: 10243
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10248':
   num_target_links: 1
   partnet_mobility_id: 10248
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10269':
   num_target_links: 1
   partnet_mobility_id: 10269
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10270':
   num_target_links: 1
   partnet_mobility_id: 10270
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10280':
   num_target_links: 1
   partnet_mobility_id: 10280
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10289':
   num_target_links: 1
   partnet_mobility_id: 10289
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10305':
   num_target_links: 1
   partnet_mobility_id: 10305
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10306':
   num_target_links: 1
   partnet_mobility_id: 10306
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10383':
   num_target_links: 1
   partnet_mobility_id: 10383
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10626':
   num_target_links: 1
   partnet_mobility_id: 10626
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10697':
   num_target_links: 1
   partnet_mobility_id: 10697
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10707':
   num_target_links: 1
   partnet_mobility_id: 10707
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11030':
   num_target_links: 1
   partnet_mobility_id: 11030
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11141':
   num_target_links: 1
   partnet_mobility_id: 11141
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11156':
   num_target_links: 1
   partnet_mobility_id: 11156
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11395':
   num_target_links: 1
   partnet_mobility_id: 11395
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11405':
   num_target_links: 1
   partnet_mobility_id: 11405
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11406':
   num_target_links: 1
   partnet_mobility_id: 11406
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11778':
   num_target_links: 1
   partnet_mobility_id: 11778
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11429':
   num_target_links: 1
   partnet_mobility_id: 11429
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11477':
   num_target_links: 1
   partnet_mobility_id: 11477
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11888':
   num_target_links: 1
   partnet_mobility_id: 11888
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10885':
   num_target_links: 1
   partnet_mobility_id: 10885
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11854':
   num_target_links: 1
   partnet_mobility_id: 11854
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '10915':
   num_target_links: 1
   partnet_mobility_id: 10915
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11945':
   num_target_links: 1
   partnet_mobility_id: 11945
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11586':
   num_target_links: 1
   partnet_mobility_id: 11586
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11242':
   num_target_links: 1
   partnet_mobility_id: 11242
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11581':
   num_target_links: 1
   partnet_mobility_id: 11581
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 '11876':
   num_target_links: 1
   partnet_mobility_id: 11876
-  scale: 0.53974655521394934
+  scale: 0.43974655521394934
 
   # Fridge
 '10036':
@@ -1105,115 +1105,115 @@
 '103646':
   num_target_links: 1
   partnet_mobility_id: 103646
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102252':
   num_target_links: 1
   partnet_mobility_id: 102252
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102244':
   num_target_links: 1
   partnet_mobility_id: 102244
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103007':
   num_target_links: 1
   partnet_mobility_id: 103007
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103012':
   num_target_links: 1
   partnet_mobility_id: 103012
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102158':
   num_target_links: 1
   partnet_mobility_id: 102158
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '101384':
   num_target_links: 1
   partnet_mobility_id: 101384
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102163':
   num_target_links: 1
   partnet_mobility_id: 102163
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103634':
   num_target_links: 1
   partnet_mobility_id: 103634
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103647':
   num_target_links: 1
   partnet_mobility_id: 103647
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102219':
   num_target_links: 1
   partnet_mobility_id: 102219
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102992':
   num_target_links: 1
   partnet_mobility_id: 102992
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102165':
   num_target_links: 1
   partnet_mobility_id: 102165
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103008':
   num_target_links: 1
   partnet_mobility_id: 103008
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103633':
   num_target_links: 1
   partnet_mobility_id: 103633
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '102229':
   num_target_links: 1
   partnet_mobility_id: 102229
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '103639':
   num_target_links: 1
   partnet_mobility_id: 103639
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '10584': # needs better mp
   num_target_links: 1
   partnet_mobility_id: 10584
-  scale: 0.53974655521394934
+  scale: 0.33974655521394934
 '11124':
   num_target_links: 1
   partnet_mobility_id: 11124
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '11279':
   num_target_links: 1
   partnet_mobility_id: 11279
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '11361':
   num_target_links: 1
   partnet_mobility_id: 11361
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '12447':
   num_target_links: 1
   partnet_mobility_id: 12447
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '12477':
   num_target_links: 1
   partnet_mobility_id: 12477
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '12483':
   num_target_links: 1
   partnet_mobility_id: 12483
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '101377':
   num_target_links: 1
   partnet_mobility_id: 101377
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '101378':
   num_target_links: 1
   partnet_mobility_id: 101378
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '102153': # Needs better mp
   num_target_links: 1
   partnet_mobility_id: 102153
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '102154':
   num_target_links: 1
   partnet_mobility_id: 102154
-  scale: 0.43974655521394934
+  scale: 0.33974655521394934
 '102155':
   num_target_links: 1
   partnet_mobility_id: 102155
@@ -1654,91 +1654,91 @@
 '102990':
   num_target_links: 1
   partnet_mobility_id: 102990
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103095':
   num_target_links: 1
   partnet_mobility_id: 103095
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103099':
   num_target_links: 1
   partnet_mobility_id: 103099
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103100':
   num_target_links: 1
   partnet_mobility_id: 103100
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103104':
   num_target_links: 1
   partnet_mobility_id: 103104
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103111':
   num_target_links: 1
   partnet_mobility_id: 103111
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103113':
   num_target_links: 1
   partnet_mobility_id: 103113
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103271':
   num_target_links: 1
   partnet_mobility_id: 103271
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103273':
   num_target_links: 1
   partnet_mobility_id: 103273
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103276':
   num_target_links: 1
   partnet_mobility_id: 103276
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103280':
   num_target_links: 1
   partnet_mobility_id: 103280
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103283':
   num_target_links: 1
   partnet_mobility_id: 103283
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103292':
   num_target_links: 1
   partnet_mobility_id: 103292
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103293':
   num_target_links: 1
   partnet_mobility_id: 103293
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103297':
   num_target_links: 1
   partnet_mobility_id: 103297
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103299':
   num_target_links: 1
   partnet_mobility_id: 103299
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103301':
   num_target_links: 1
   partnet_mobility_id: 103301
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103303':
   num_target_links: 1
   partnet_mobility_id: 103303
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103305':
   num_target_links: 1
   partnet_mobility_id: 103305
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103307':
   num_target_links: 1
   partnet_mobility_id: 103307
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103789':
   num_target_links: 1
   partnet_mobility_id: 103789
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 '103792':
   num_target_links: 1
   partnet_mobility_id: 103792
-  scale: 0.23974655521394934
+  scale: 0.53974655521394934
 # Buttons/ levers
 '100849':
   num_target_links: 1
