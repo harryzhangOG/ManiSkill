@@ -456,6 +456,8 @@ class BaseEnv(Env):
             if 'rgb' in obs[self.obs_mode]:
                 view_dict = obs[self.obs_mode]
                 for view_type, view in view_dict.items():
+                    if type(view).__name__ == 'dict':
+                        continue
                     ob_space[view_type] = spaces.Box(
                         low=-float('inf'), high=float('inf'),
                         shape=view.shape, dtype=view.dtype,
@@ -464,6 +466,8 @@ class BaseEnv(Env):
                 for camera_name, view_dict in obs[self.obs_mode].items():
                     ob_space[camera_name] = {}
                     for view_type, view in view_dict.items():
+                        if type(view).__name__ == 'dict':
+                            continue
                         ob_space[camera_name][view_type] = spaces.Box(
                             low=-float('inf'), high=float('inf'),
                             shape=view.shape, dtype=view.dtype,
