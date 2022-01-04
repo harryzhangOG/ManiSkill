@@ -279,7 +279,7 @@ class BaseEnv(Env):
                 self.selected_id = articulation_config['partnet_mobility_id']
                 urdf = download_data(
                     articulation_config['partnet_mobility_id'],
-                    directory=None
+                    directory=os.path.expanduser("~/code/discriminative_embeddings/partnet-mobility-dataset")
                 )
                 vhacd_urdf = Path(urdf).parent.joinpath('mobility_fixed.urdf')
                 if vhacd_urdf.exists():
