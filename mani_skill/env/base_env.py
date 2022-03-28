@@ -54,10 +54,14 @@ def download_data(model_id, directory=None):
 
     # z = zipfile.ZipFile(io.BytesIO(r.content))
 
-    if directory:
-        urdf_file = os.path.join(directory, str(model_id), "mobility.urdf")
-        if os.path.exists(urdf_file):
-            return urdf_file
+    if not directory:
+        directory = os.environ.get("PARTNET_MOBILITY_DATASET")
+        if not directory:
+            directory = "partnet-mobility-dataset"
+    urdf_file = os.path.join(directory, str(model_id), "mobility.urdf")
+
+    if os.path.exists(urdf_file):
+        return urdf_file
 
     # os.makedirs(directory, exist_ok=True)
     # z.extractall(directory)
