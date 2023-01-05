@@ -2,15 +2,14 @@ import numpy as np
 import transforms3d
 import yaml
 from gym import spaces
-from sapien.core import Articulation, Engine, Pose, Scene
-
-from third_party.ManiSkill.mani_skill.agent.controllers import (
+from mani_skill.agent.controllers import (
     LPFilter,
     PIDController,
     PositionController,
     VelocityController,
 )
-from third_party.ManiSkill.mani_skill.utils.geometry import rotate_2d_vec_by_angle
+from mani_skill.utils.geometry import rotate_2d_vec_by_angle
+from sapien.core import Articulation, Engine, Pose, Scene
 
 
 class CombinedAgent:

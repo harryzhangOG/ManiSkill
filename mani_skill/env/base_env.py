@@ -11,19 +11,15 @@ import numpy as np
 import requests
 import sapien.core as sapien
 from gym import Env, spaces
-from sapien.core import Pose
-from sapien.utils import Viewer
-
-from third_party.ManiSkill.mani_skill.utils.config_parser import (
+from mani_skill.utils.config_parser import (
     preprocess,
     process_variables,
     process_variants,
 )
-from third_party.ManiSkill.mani_skill.utils.geometry import angle_distance
-from third_party.ManiSkill.mani_skill.utils.misc import (
-    get_actor_state,
-    get_pad_articulation_state,
-)
+from mani_skill.utils.geometry import angle_distance
+from mani_skill.utils.misc import get_actor_state, get_pad_articulation_state
+from sapien.core import Pose
+from sapien.utils import Viewer
 
 from ..agent import CombinedAgent
 from .camera import (

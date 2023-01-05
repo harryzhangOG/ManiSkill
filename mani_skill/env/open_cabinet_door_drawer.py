@@ -2,10 +2,8 @@ import pathlib
 
 import numpy as np
 import trimesh
-from sapien.core import Articulation, Pose
-
-from third_party.ManiSkill.mani_skill.env.base_env import BaseEnv
-from third_party.ManiSkill.mani_skill.utils.contrib import (
+from mani_skill.env.base_env import BaseEnv
+from mani_skill.utils.contrib import (
     angle_distance,
     apply_pose_to_points,
     norm,
@@ -13,11 +11,10 @@ from third_party.ManiSkill.mani_skill.utils.contrib import (
     o3d_to_trimesh,
     trimesh_to_o3d,
 )
-from third_party.ManiSkill.mani_skill.utils.geometry import (
-    get_axis_aligned_bbox_for_articulation,
-)
-from third_party.ManiSkill.mani_skill.utils.misc import sample_from_tuple_or_scalar
-from third_party.ManiSkill.mani_skill.utils.o3d_utils import merge_mesh, np2mesh
+from mani_skill.utils.geometry import get_axis_aligned_bbox_for_articulation
+from mani_skill.utils.misc import sample_from_tuple_or_scalar
+from mani_skill.utils.o3d_utils import merge_mesh, np2mesh
+from sapien.core import Articulation, Pose
 
 _this_file = pathlib.Path(__file__).resolve()
 
